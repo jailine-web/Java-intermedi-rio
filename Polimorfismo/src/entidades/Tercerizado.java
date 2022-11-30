@@ -29,7 +29,7 @@ public class Tercerizado extends Funcionarios{
 	}
 
 	public String toString() {
-		return "Nome "+ getNome()+ " pagamento: "+ pagamento();
+		return "Nome "+ getNome()+ " pagamento: " ;
 	}
 	
 }

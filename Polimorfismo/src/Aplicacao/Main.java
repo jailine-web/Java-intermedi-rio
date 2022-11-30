@@ -33,7 +33,7 @@ public class Main {
 				
 				Funcionarios func = new Funcionarios(nome, horas, valorP);
 				funcionarios.add(func);
-			}else {
+			}else if(resp.equals("s")){
 				System.out.print("Digite o nome do funcionário: ");
 				ler.nextLine();
 				String nome = ler.nextLine();
