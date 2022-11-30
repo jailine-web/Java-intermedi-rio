@@ -3,7 +3,6 @@ package entidades;
 public class Tercerizado extends Funcionarios{
 	
 	private Double valorAdicional = 0d;
-	private Double pag = pagamento();
 	
 	public Tercerizado() {
 		
@@ -23,13 +22,13 @@ public class Tercerizado extends Funcionarios{
 	}
 
 	@Override
-	public Double pagamento(){
-		valorAdicional += 0.110d;
-		return pag + valorAdicional;
+	public final double pagamento(){
+		valorAdicional += 1.1d;
+		return super.pagamento() + valorAdicional;
 	}
 
 	public String toString() {
-		return "Nome "+ getNome()+ " pagamento: " ;
+		return "Nome: "+ getNome()+ "salario: " + pagamento();
 	}
 	
 }

@@ -28,24 +28,27 @@ public class Main {
 				String nome = ler.nextLine();
 				System.out.print("Digite a quantidade de horas trabalhadas: ");
 				Integer horas = ler.nextInt();
-				System.out.print("Digite o valor da hora");
+				System.out.print("Digite o valor da hora: ");
 				Double valorP = ler.nextDouble();
 				
 				Funcionarios func = new Funcionarios(nome, horas, valorP);
 				funcionarios.add(func);
+				System.out.println();
+				
 			}else if(resp.equals("s")){
 				System.out.print("Digite o nome do funcionário: ");
 				ler.nextLine();
 				String nome = ler.nextLine();
 				System.out.print("Digite a quantidade de horas trabalhadas: ");
 				Integer horas = ler.nextInt();
-				System.out.print("Digite o valor da hora");
+				System.out.print("Digite o valor da hora: ");
 				Double valorP = ler.nextDouble();
 				System.out.print("Valor adiconal: ");
 				Double vA = ler.nextDouble();
 				
 				Funcionarios tercerizado = new Tercerizado(nome, horas, valorP, vA);
 				funcionarios.add(tercerizado);
+				System.out.println();
 			}
 			
 		}

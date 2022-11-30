@@ -39,11 +39,11 @@ public class Funcionarios {
 		this.valorPorHoras = valorPorHoras;
 	}
 	
-	public Double pagamento() {
+	public double pagamento() {
 		return valorPorHoras * horas;
 	}
 	
 	public String toString() {
-		return "Nome: "+ getNome() + "Salário: " + pagamento();
+		return "Nome: "+ getNome() + " Salário: " + pagamento();
 	}
 }
