@@ -24,7 +24,7 @@ public class ProdutoImportado extends Produto{
 	@Override
 	public String etiquetaPreco() {
 		return  getNome() + " $ "+ String.format("%.2f",getPreco())+
-				"(Taxa Alfandegária: R$ "+ String.format("%.2f", getTaxaAlfandegaria()) + " )";
+				"(Taxa Alfandegária: R$ "+ String.format("%.2f", getTaxaAlfandegaria()) +" )";
 		
 	}
 	
