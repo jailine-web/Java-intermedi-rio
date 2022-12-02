@@ -1,5 +1,6 @@
 package FigurasGeometricas;
 
+import java.awt.MultipleGradientPaint.ColorSpaceType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class Main {
 			System.out.print("É retangulo(r) ou circulo? (r/c):");
 			char res = ler.next().charAt(0);
 			System.out.print("Qual a cor? (red/black/blue): ");
-			String cor = ler.next();
+			Cor cor = Cor.valueOf(ler.next());
 
 			if (res == 'r') {
 				System.out.print("Largura: ");
@@ -28,6 +29,7 @@ public class Main {
 				System.out.print("Altura: ");
 				double alt = ler.nextDouble();
 				figuras.add(new Retangulo(cor, base, alt));
+				
 			} else {
 				System.out.print("Qual o raio? ");
 				double raio = ler.nextDouble();
@@ -36,11 +38,13 @@ public class Main {
 			}
 		}
 		
+		System.out.println();
 		System.out.println("ÁREAS DAS FIGURAS");
 		for (Figuras fig : figuras) {
 			System.out.println(String.format("%.2f", fig.area()));
 		}
-
+		
+		ler.close();
 	}
 
 }

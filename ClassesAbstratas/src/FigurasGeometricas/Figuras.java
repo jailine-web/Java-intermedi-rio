@@ -2,12 +2,19 @@ package FigurasGeometricas;
 
 public abstract class Figuras {
 
-	private String cor;
+	private Cor cor;
 	
-	public Figuras(String cor) {
+	public Figuras(Cor cor) {
 		super();
-		this.cor = cor;
+		this.setCor(cor);
 	}
 
+	public Cor getCor() {
+		return cor;
+	}
+
+	public void setCor(Cor cor) {
+		this.cor = cor;
+	}
 	public abstract Double area();
 }

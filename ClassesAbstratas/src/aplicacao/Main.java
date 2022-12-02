@@ -34,5 +34,6 @@ public class Main {
 			c.deposit(10);
 			System.out.println(c.getBalance());
 		}
+		
 	}
 }
