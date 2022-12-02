@@ -30,5 +30,4 @@ public class ProdutoUsado extends Produto {
 		return getNome() + " (usado) R$ " + String.format("%.2f", getPreco()) + 
 				" Data de fabricação: " + sdf.format(dataFabricacao);
 	}
-
 }
