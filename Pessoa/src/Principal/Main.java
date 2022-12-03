@@ -53,6 +53,7 @@ public class Main {
 			soma += p.calcularImposto();
 		}
 		System.out.println("\nTotal de impostos: " + soma);
+		ler.close();
 	}
 
 }
