@@ -38,19 +38,19 @@ public class Reserva {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 	}
 	
-	public String atualizacaoDatas(Date dataEntrada , Date dataSaida) {
+	public void atualizacaoDatas(Date dataEntrada , Date dataSaida) {
 		Date now = new Date();
 		
 		if(dataSaida.before(now) || dataEntrada.before(now)){
-			return "Erro na reserva: datas passadas";
+			throw new IllegalArgumentException("Erro na reserva: datas passadas");
 		} 
 		if(!dataSaida.after(dataEntrada)){
-			return "Erro ao realizar reserva: Data de saída é menor que a data de entrada";
+			throw new IllegalArgumentException("Erro ao realizar reserva: Data de saída é menor "
+					+ "que a data de entrada");
 		}
 		
 		this.dataEntrada = dataEntrada;
 		this.dataSaida   = dataSaida;
-		return null;
 	}
 	
 	@Override

@@ -9,25 +9,24 @@ import Model.Reserva;
 
 public class Main {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args) {
 
 		Scanner ler = new Scanner(System.in);
-
 		SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
 
-		System.out.print("Número do quarto: ");
-		int numero = ler.nextInt();
-		System.out.print("Data entrada: ");
-		Date dataEntrada = dataFormatada.parse(ler.next());
-		System.out.print("Data Saída: ");
-		Date dataSaida = dataFormatada.parse(ler.next());
+		try {
 
-		if (!dataSaida.after(dataEntrada)) {
-			System.out.println("Erro ao realizar reserva: Data de saída é menor que a data de entrada");
-		} else {
+			System.out.print("Número do quarto: ");
+			int numero = ler.nextInt();
+			System.out.print("Data entrada: ");
+			Date dataEntrada = dataFormatada.parse(ler.next());
+			System.out.print("Data Saída: ");
+			Date dataSaida = dataFormatada.parse(ler.next());
+
 			Reserva r = new Reserva(numero, dataEntrada, dataSaida);
 
 			System.out.println("Reserva: " + r.toString());
+
 			System.out.println();
 			System.out.println("Entre com os dados para atualizar a reserva:");
 			System.out.print("Data entrada: ");
@@ -35,16 +34,15 @@ public class Main {
 			System.out.print("Data Saída: ");
 			dataSaida = dataFormatada.parse(ler.next());
 
-			String error = r.atualizacaoDatas(dataEntrada, dataSaida);
+			r.atualizacaoDatas(dataEntrada, dataSaida);
+			System.out.println("Reserva: " + r.toString());
+		}
 
-			if (error != null) {
-
-				System.out.println("Erro: "+ error);
-			} 
-			else {
-
-				System.out.println("Reserva: " + r.toString());
-			}
+		catch (ParseException e) {
+			System.out.println("Formato de data inválido");
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println("Erro na reserva " + e.getMessage());
 		}
 
 		ler.close();
