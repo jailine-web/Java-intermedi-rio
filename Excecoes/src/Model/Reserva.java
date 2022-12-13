@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import Model.excecao.DominioException;
+
 public class Reserva {
 
 	private Integer numeroQuarto;
@@ -12,7 +14,11 @@ public class Reserva {
 	
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			
-	public Reserva(Integer numeroQuarto, Date dataEntrada, Date dataSaida) {
+	public Reserva(Integer numeroQuarto, Date dataEntrada, Date dataSaida)  {
+		if(!dataSaida.after(dataEntrada)){
+			throw new DominioException("Erro ao realizar reserva: Data de saída é menor "
+					+ "que a data de entrada");
+		}
 		this.numeroQuarto = numeroQuarto;
 		this.dataEntrada = dataEntrada;
 		this.dataSaida = dataSaida;
@@ -42,10 +48,10 @@ public class Reserva {
 		Date now = new Date();
 		
 		if(dataSaida.before(now) || dataEntrada.before(now)){
-			throw new IllegalArgumentException("Erro na reserva: datas passadas");
+			throw new DominioException("Erro na reserva: datas passadas");
 		} 
 		if(!dataSaida.after(dataEntrada)){
-			throw new IllegalArgumentException("Erro ao realizar reserva: Data de saída é menor "
+			throw new DominioException("Erro ao realizar reserva: Data de saída é menor "
 					+ "que a data de entrada");
 		}
 		

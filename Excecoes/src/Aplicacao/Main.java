@@ -3,9 +3,11 @@ package Aplicacao;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Model.Reserva;
+import Model.excecao.DominioException;
 
 public class Main {
 
@@ -41,8 +43,15 @@ public class Main {
 		catch (ParseException e) {
 			System.out.println("Formato de data inválido");
 		}
-		catch(IllegalArgumentException e) {
+		catch(DominioException e) {
 			System.out.println("Erro na reserva " + e.getMessage());
+		}
+		/* Para qualquer tipo de erro causado por runtimesException
+		catch(RuntimeException e) {
+			System.out.println("Erro inesperado");
+		}*/
+		catch(InputMismatchException e) {
+			System.out.println("Digite um número de quarto válido");
 		}
 
 		ler.close();
