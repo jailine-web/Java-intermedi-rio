@@ -52,16 +52,16 @@ public class Conta {
 	}
 	
 	public void sacar(Double valor) {
+		validaSaque(valor);
+		saldo -= valor;
+	}
+	
+	private void validaSaque(Double valor) {
 		if (saldo < valor) {
-			System.out.println("Não há saldo suficiente! ");
+			throw new ExcecaoCustomizada("Não há saldo suficiente! ");
 		}
 		else if(valor > limite) {
-			System.out.println("O valor requerido é superior ao limite de saque!");
+			throw new ExcecaoCustomizada("O valor requerido é superior ao limite de saque!");
 		}
-		else {
-			saldo -= valor;
-			System.out.println("Saldo atual: "+ saldo);
-			
-		}
-	}
+}
 }

@@ -1,15 +1,11 @@
 package resolucaoExercicio;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class PrincipalConta {
 	
 	public static void main(String[] args) {
-		
-		List<Conta> conta = new ArrayList<>();
-		
+			
 		Scanner ler = new Scanner(System.in);
 	
 		System.out.println("Entre com os dados da conta:");
@@ -20,17 +16,22 @@ public class PrincipalConta {
 		String nome = ler.nextLine();
 		System.out.print("Valor a ser depositado: ");
 		double valorInicial = ler.nextDouble();
-		System.out.print("Quanto deseja retirar? ");
+		System.out.print("Qual o limite do saque? ");
 		double retirar = ler.nextDouble();
 		
 		Conta c = new Conta(numero, nome, valorInicial, retirar);
-		conta.add(c);
 		
 		System.out.println();
 		System.out.print("Entre com o valor que deseja retirar: ");
 		double valor = ler.nextDouble();
-		c.sacar(valor);
-		
+		try {
+			
+			c.sacar(valor);
+			System.out.println("Saldo atual: "+ c.getSaldo());
+		} 
+		catch(ExcecaoCustomizada e) {
+			System.out.println(e.getMessage());
+		}
 		
 		ler.close();
 	}
