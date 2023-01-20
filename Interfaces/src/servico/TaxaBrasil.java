@@ -1,6 +1,6 @@
 package servico;
 
-public class TaxaBrasil {
+public class TaxaBrasil implements ServicoDeImposto{
 
 	public double imposto(double quantia) {
 		
