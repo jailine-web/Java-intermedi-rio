@@ -16,10 +16,9 @@ public class Principal {
 		public static void main(String[] args) throws ParseException {
 			
 			Scanner ler = new Scanner(System.in);
-			DateTimeFormatter dtf = new DateTimeFormatterBuilder().toFormatter().ofPattern("dd/MM/yyyy HH:mm");
 			
-			//Maneira legada
-			//DateTimeFormatter dff = new DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+			DateTimeFormatter dtf = new DateTimeFormatterBuilder().toFormatter().ofPattern("dd/MM/yyyy HH:mm");
+			//DateTimeFormatter df =  DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 			
 			System.out.println("Dados do aluguel");
 			System.out.print("Modelo do carro: ");
