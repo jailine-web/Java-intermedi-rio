@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ServicoCalculadora{
 
-	public static <T extends Comparable<T>> T servicoCalc(List<T> lista) {
+	public static <T extends Comparable<? super T>> T servicoCalc(List<T> lista) {
 		if(lista.isEmpty()) {
 			throw new IllegalStateException("A lista está vazia");
 		}
