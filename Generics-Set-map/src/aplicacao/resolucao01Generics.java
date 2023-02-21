@@ -5,13 +5,17 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+import entities.Produto;
 import service.ServicoCalculadora;
 
 public class resolucao01Generics {
 
 	public static void main(String[] args) {
 
-		List<Integer> lista = new ArrayList<Integer>();
+		Locale.setDefault(Locale.US);
+		List<Produto> lista = new ArrayList<>();
 		
 		String caminho = "C:\\Users\\Jai\\Documents\\Java interm\\Generics-Set-map\\produtos.txt";
 		
@@ -19,12 +23,14 @@ public class resolucao01Generics {
 			
 			String linha = br.readLine();
 			while(linha != null) {
-				lista.add(Integer.parseInt(linha));
+				
+				String[] campos = linha.split(",");
+				lista.add(new Produto(campos[0], Double.parseDouble(campos[1])));
 				linha = br.readLine();
 			}
 			
-			Integer r = ServicoCalculadora.servicoCalc(lista);
-			System.out.println("Maximo: ");
+			Produto r = ServicoCalculadora.servicoCalc(lista);
+			System.out.println("Mais caro: ");
 			System.out.println(r);
 		}
 		

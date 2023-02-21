@@ -4,12 +4,12 @@ import java.util.List;
 
 public class ServicoCalculadora{
 
-	public static Integer servicoCalc(List<Integer> lista) {
+	public static <T extends Comparable<T>> T servicoCalc(List<T> lista) {
 		if(lista.isEmpty()) {
-			throw new IllegalStateException("");
+			throw new IllegalStateException("A lista está vazia");
 		}
-		Integer max = lista.get(0);
-		for(Integer item: lista) {
+		T max = lista.get(0);
+		for(T item: lista) {
 			if(item.compareTo(max)>0) {
 				max = item;
 			}

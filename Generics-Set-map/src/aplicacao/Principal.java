@@ -9,7 +9,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		Scanner ler = new Scanner(System.in);
-			
+		
 		//PrintService<Integer> pI = new PrintService<>();
 		PrintService<String> pS = new PrintService<>();
 
