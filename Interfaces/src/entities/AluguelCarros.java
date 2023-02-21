@@ -14,8 +14,8 @@ public class AluguelCarros {
 		super();
 	}
 
-	public AluguelCarros(LocalDateTime instanteInicial, LocalDateTime instanteFinal, Veiculos veiculo) {
-		super();
+	public AluguelCarros(LocalDateTime instanteInicial, 
+		LocalDateTime instanteFinal, Veiculos veiculo) {
 		this.instanteInicial = instanteInicial;
 		this.instanteFinal = instanteFinal;
 		this.veiculo = veiculo;

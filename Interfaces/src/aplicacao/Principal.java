@@ -13,12 +13,12 @@ import servico.TaxaBrasil;
 
 public class Principal {
 
-		public static void main(String[] args) throws ParseException {
+		public static void main(String[] args) {
 			
 			Scanner ler = new Scanner(System.in);
 			
-			DateTimeFormatter dtf = new DateTimeFormatterBuilder().toFormatter().ofPattern("dd/MM/yyyy HH:mm");
-			//DateTimeFormatter df =  DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+			//DateTimeFormatter dtf = new DateTimeFormatterBuilder().toFormatter().ofPattern("dd/MM/yyyy HH:mm");
+			DateTimeFormatter dtf =  DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 			
 			System.out.println("Dados do aluguel");
 			System.out.print("Modelo do carro: ");

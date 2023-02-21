@@ -29,10 +29,11 @@ public class ServicoDeAluguel {
 		return imposto;
 	}
 
-	public void fatura( AluguelCarros aluguelC) {
+	public void fatura(AluguelCarros aluguelC) {
 		
 		//Encontra a duração entre dois instantes
-		double duracaoMinutos = Duration.between(aluguelC.getInstanteInicial(), aluguelC.getInstanteFinal()).toMinutes();
+		double duracaoMinutos = Duration.between(aluguelC.getInstanteInicial(), 
+		aluguelC.getInstanteFinal()).toMinutes();
 		double horas = duracaoMinutos/60;
 		double pagBasico;
 		
