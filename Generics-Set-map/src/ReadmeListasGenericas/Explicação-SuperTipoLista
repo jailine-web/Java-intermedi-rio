@@ -38,3 +38,35 @@ Atenção: não é possível adicionar dados em uma coleção do tipo curinga!
 
 List<?> lista = new ArrayList<Integer>();
 lista.add(3); X >>> esse comando da erro de compilação
+
+Outro exemplo:
+
+List<Integer> inList = new ArrayList<>();
+inList.add(10);
+inList.add(5);
+List<? extends Number> list = inList;
+Number x = list.get(0);
+list.add(20) --> dá erro de compilação
+Este é um exemplo de covariância
+Quando é possível executar a operação get (acessar valores), mas não é possível 
+realizar a operação put (inserir valores).
+Get OK!
+Put Error!
+
+#Contravariância != de covariância
+
+Exemplo:
+List<Object> myObj = new ArrayList<>();
+myObj.add("Maria");
+myObj.add("Alex");
+
+Aceita tipos de numbers(tipos que extende de Number) e supertipos de numbers(objects)
+List<? super Number> numeros = myObj;
+numeros.add(10);
+numeros.add(3,14);
+
+Number x =numeros.get(0); --> Erro de compilação.
+
+Get - ERROR!
+Put - OK! 
+

@@ -15,7 +15,6 @@ public class Principal {
 		List<Circulo> circulos = new ArrayList<Circulo>();
 		circulos.add(new Circulo(3));
 		circulos.add(new Circulo(4));
-		
 		System.out.println("Área total: "+ areaTotal(minhasFiguras));
 		
 	}
