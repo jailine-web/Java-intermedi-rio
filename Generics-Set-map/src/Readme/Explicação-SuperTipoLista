@@ -1,0 +1,40 @@
+List<Object> não é o supertipo de qualquer lista
+Apesar de object ser o supertipo de todas às classes
+
+Exemplo:
+List<Object> myObj = new ArrayList<>();
+List<Integer> myNumbers = new ArrayList<>();
+myObj = myNumbers;
+Se atribuirmos o myNumbers ao myObj surgirá um erro de compilação,
+pois a lista de objetos não equivale a lista de inteiros.
+
+#O supertipo de qualquer tipo de lista é List<?>. Este é um tipo curinga
+ Exemplo:
+ List<?> myObj = new ArrayList<>();
+ List<Integer> myNumbers = new ArrayList<>();
+ myObjs = mynumbers; 
+ 
+ Neste caso a atribuição será aceita e realizada.
+ 
+ Simulação:
+ 
+ public class ListaTipoCuriga {
+
+	public static void main(String[] args) {
+		
+		//Essa operação dá certo
+		Object object;
+		Integer x = 10;
+		object = x;
+		
+		List<Object> myObj = new ArrayList<>();
+		List<Integer> myNumbers = new ArrayList<>();
+		//Essa operação não da certo
+		//myObj = myNumbers;
+	}
+}
+
+Atenção: não é possível adicionar dados em uma coleção do tipo curinga!
+
+List<?> lista = new ArrayList<Integer>();
+lista.add(3); X >>> esse comando da erro de compilação
