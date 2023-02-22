@@ -1,0 +1,19 @@
+//Equals compara um objeto com outro objeto retornando true ou false.
+		//Exemplo:
+		
+		String a = "Maria";
+		String b = "Alex";
+		
+		System.out.println(a.equals(b));
+		
+		String a1 = "Maria";
+		String b1 = "Alex";
+		
+		//HashCode retorna um número inteiro representando um código gerado a partir das informações do objeto.
+		//Se o hashCode dos objs forem diferentes, então, os objetos são diferentes. Quando objs são 
+		//iguais (pode haver colisão, dois objs diferentes gerarem o mesmo hashCode(é muito difícil, mas pode ocorrer))
+		System.out.println(a1.hashCode());
+		System.out.println(b1.hashCode());
+		Resultado: Maria: 74113750
+				   Alex:  2043454
+		

@@ -65,7 +65,7 @@ List<? super Number> numeros = myObj;
 numeros.add(10);
 numeros.add(3,14);
 
-Number x =numeros.get(0); --> Erro de compilação.
+Number x = numeros.get(0); --> Erro de compilação.
 
 Get - ERROR!
 Put - OK! 
