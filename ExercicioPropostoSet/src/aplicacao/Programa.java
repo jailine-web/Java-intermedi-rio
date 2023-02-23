@@ -43,7 +43,7 @@ public class Programa {
 
 		}
 
-		Set<Alunos> juncao = new TreeSet<>(setAlunos);
+		Set<Alunos> juncao = new HashSet<Alunos>(setAlunos);
 		System.out.println("Total de alunos: "+juncao.size());
 	}
 

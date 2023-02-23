@@ -1,7 +1,5 @@
 package entidades;
 
-import java.util.Objects;
-
 public class Alunos implements Comparable<Alunos>{
 	
 	private Integer codigo;
