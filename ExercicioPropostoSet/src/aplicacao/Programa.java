@@ -3,7 +3,6 @@ package aplicacao;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.TreeSet;
 
 import entidades.Alunos;
 
@@ -44,7 +43,7 @@ public class Programa {
 		}
 
 		Set<Alunos> juncao = new HashSet<Alunos>(setAlunos);
-		System.out.println("Total de alunos: "+juncao.size());
+		System.out.println("Total de alunos: "+ juncao.size());
 	}
 
 }

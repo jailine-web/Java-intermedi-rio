@@ -34,7 +34,7 @@ public class Programa {
 				linha = br.readLine();
 			}
 			
-			System.out.println("Total de usuários: "+setUsuarios.size());
+			System.out.println("Total de usuários: "+ setUsuarios.size());
 		}
 		catch(IOException e) {
 			System.out.println("Error: "+e.getMessage());

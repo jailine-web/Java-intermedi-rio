@@ -1,6 +1,8 @@
 package entidades;
 
-public class Alunos implements Comparable<Alunos>{
+import java.util.Objects;
+
+public class Alunos {
 	
 	private Integer codigo;
 	
@@ -17,7 +19,20 @@ public class Alunos implements Comparable<Alunos>{
 	}
 
 	@Override
-	public int compareTo(Alunos a) {
-		return codigo.compareTo(a.getCodigo());
+	public int hashCode() {
+		return Objects.hash(codigo);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Alunos other = (Alunos) obj;
+		return Objects.equals(codigo, other.codigo);
+	}
+
 }
