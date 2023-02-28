@@ -16,9 +16,7 @@ public class Programa {
 		produtos.add(new Produto("Notebook", 1200.00));
 		produtos.add(new Produto("Tablet", 450.00));
 
-		Comparator<Produto> comp = (p1 , p2) ->{
-			return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
-		};
+		Comparator<Produto> comp = (p1 , p2) -> p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
 
 		produtos.sort(comp);
 
