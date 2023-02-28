@@ -26,9 +26,11 @@ public class programa {
 				if (votos.containsKey(nome)) {
 					int votosAtuais = votos.get(nome);
 					votos.put(nome, cont + votosAtuais);
-				} else {
+				} 
+				else {
 					votos.put(nome, cont);
 				}
+				
 				linha = br.readLine();
 
 			}
