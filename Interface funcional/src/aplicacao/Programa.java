@@ -16,7 +16,7 @@ public class Programa {
 		lista.add(new Produto("Tablet", 350.00));
 		lista.add(new Produto("HD Case", 80.00));
 		
-		lista.removeIf(Produto::ProdutoPredicateEstatico);
+		lista.removeIf(Produto::ProdutoPredicate);
 		
 		for(Produto p: lista) {
 			System.out.println(p);
