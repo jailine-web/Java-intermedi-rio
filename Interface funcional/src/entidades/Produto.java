@@ -26,7 +26,11 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-
+	
+	public static boolean ProdutoPredicateEstatico(Produto p){
+		return p.getPreco() >= 100.0;
+	}
+	
 	@Override
 	public String toString() {
 		return "Produto: " + nome + ", Preço: " + preco;

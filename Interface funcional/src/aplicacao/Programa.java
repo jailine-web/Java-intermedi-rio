@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entidades.Produto;
-import entidades.ProdutoPredicate;
 
 public class Programa {
 
@@ -17,7 +16,7 @@ public class Programa {
 		lista.add(new Produto("Tablet", 350.00));
 		lista.add(new Produto("HD Case", 80.00));
 		
-		lista.removeIf(new ProdutoPredicate());
+		lista.removeIf(Produto::ProdutoPredicateEstatico);
 		
 		for(Produto p: lista) {
 			System.out.println(p);
