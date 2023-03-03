@@ -2,9 +2,8 @@ package aplicacao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.function.Consumer;
 
-import entidades.AtualizacaoPreco;
 import entidades.Produto;
 
 public class Programa {
@@ -18,7 +17,14 @@ public class Programa {
 		lista.add(new Produto("Tablet", 350.00));
 		lista.add(new Produto("HD Case", 80.90));
 		
-		lista.forEach(Produto::atualizacaoDoPrecoNaoEstatico);
+		//Opcional, fica mais flexivel
+		double fator = 1.1;
+		Consumer<Produto> cons = p -> {
+			p.setPreco(p.getPreco()* fator);
+			
+		};
+		
+		lista.forEach(cons);
 		lista.forEach(System.out::println);
 	}
 
