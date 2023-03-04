@@ -30,6 +30,10 @@ public class Produto {
 	public static String nomesMaiusculosEstatico (Produto p) {
 		return p.getNome().toUpperCase();
 	}
+	//Como é um método não estático ele trabalha com o próprio objeto
+	public String nomesMaiusculosNaoEstatico () {
+		return getNome().toUpperCase();
+	}
 	
 	
 	

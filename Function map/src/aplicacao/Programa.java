@@ -19,7 +19,7 @@ public class Programa {
 		lista.add(new Produto("Tablet", 350.00));
 		lista.add(new Produto("HD Case", 80.90));
 		
-		List<String> nomes = lista.stream().map(Produto::nomesMaiusculosEstatico).collect(Collectors.toList());
+		List<String> nomes = lista.stream().map(Produto::nomesMaiusculosNaoEstatico).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 	}
