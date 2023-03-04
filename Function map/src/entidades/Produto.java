@@ -27,15 +27,11 @@ public class Produto {
 		this.preco = preco;
 	}
 	//Método estático
-	public static void atualizacaoDoPrecoEstatico(Produto p) {
-		p.setPreco(p.getPreco() * 1.1);
+	public static String nomesMaiusculosEstatico (Produto p) {
+		return p.getNome().toUpperCase();
 	}
-	//Método não estático trabalha com os atributos do próprio obj
-	public void atualizacaoDoPrecoNaoEstatico() {
-		setPreco(getPreco() * 1.1);
-		//Outra forma
-	//	preco = preco * 1.1;
-	}
+	
+	
 	
 	@Override
 	public String toString() {
