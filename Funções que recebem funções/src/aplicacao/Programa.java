@@ -19,9 +19,9 @@ public class Programa {
 		
 		ServicoProduto sp = new ServicoProduto();
 		
-		double sum = sp.somaFiltrada(lista);
+		double soma = sp.somaFiltrada(lista, p -> p.getNome().charAt(0) == 'T');
 		
-		System.out.println("Soma: "+String.format("%.2", sum));
+		System.out.println("Soma: "+String.format("%.2f", soma));
 	}
 
 }
