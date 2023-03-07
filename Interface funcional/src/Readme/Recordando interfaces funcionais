@@ -1,0 +1,11 @@
+removeIf(Predicate)
+--> Função que recebe um predicate como parâmetro
+
+foreach(Consumer)
+--> Função que recebe um consumer como parâmetro
+
+map(Function)
+--> Recebe uma função do tipo function como argumento
+
+
+
