@@ -1,0 +1,53 @@
+Stream: é uma sequência de elementos advinda de uma 
+fonte de dados que oferece suporte a "operações agregadas"
+
+--> Fonte de dados: Coleção, array, função de iteração, 
+recurso de entrada e saída
+
+Pipeline: Operações que são aplicadas as streams é composto por 0 ou mais operações 
+intermediárias e uma terminal
+
+Operação intermediária 
+
+-->lazy
+- Produz uma nova Stream(encadeamento)
+- Só executa quando uma operação terminal é invocada
+
+Operação terminal
+- Produz um objeto não-stream(coleção ou outro)
+- Determina o fim do processamento da stream
+
+Operações intermediárias
+
+-filter
+-map
+-flatmap
+-peek
+-distinct
+-sorted
+-skip
+-limit(*)  
+*short-circuit: é uma operação que delimita/retorna a quantidade de elementos que será retornado na consulta
+O processamento termina quando o número especificado no limit é atingido(Ela corta a execução)
+
+Opções terminais 
+
+foreach
+foreachordered
+toArray
+reduce
+collect
+min
+max
+count
+anyMatch(*)
+allMatch(*)
+noneMatch(*)
+findfirst(*)
+findAny(*)
+
+*short-circuit
+
+
+Prof. Dr Nélio Alves
+

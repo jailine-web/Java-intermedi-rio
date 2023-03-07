@@ -20,8 +20,12 @@ public class Programa {
 		ServicoProduto sp = new ServicoProduto();
 		
 		double soma = sp.somaFiltrada(lista, p -> p.getNome().charAt(0) == 'T');
+		//double prod = sp.somaFiltrada(lista, p -> p.getPreco() < 100);
+		double m = sp.somaFiltrada(lista, p -> p.getPreco()<100.0);
 		
-		System.out.println("Soma: "+String.format("%.2f", soma));
+		System.out.println("Soma dos itens que se iniciam com a letra T : "+String.format("%.2f", soma));
+		System.out.println("Soma dos valores menores que 100: "+String.format("%.2f", m));
+		
 	}
 
 }
