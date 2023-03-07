@@ -1,0 +1,6 @@
+tv,900
+mouse,50
+tablet,350
+hd case,80
+computer,850
+monitor,290
