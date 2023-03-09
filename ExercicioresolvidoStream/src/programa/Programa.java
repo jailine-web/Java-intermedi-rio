@@ -34,6 +34,7 @@ public class Programa {
 					.reduce(0.0, (x,y) -> x +y) / lista.size();
 			
 			System.out.println("Preço médio "+ precoMedio);
+			
 			Comparator<String> comp = (s1, s2) -> s1.toUpperCase().compareTo(s2.toUpperCase());
 			
 			List<String> nomes =  lista.stream().filter(p -> p.getPreco()<precoMedio)
