@@ -51,3 +51,14 @@ findAny(*)
 
 Prof. Dr Nélio Alves
 
+Mais sobre reduce:
+
+Para entender como fazer uso da operação Stream.reduce(), vamos dividir os elementos participantes da operação:
+
+Identidade - um elemento que é o valor inicial da operação de redução e o resultado padrão se o fluxo estiver vazio;
+
+Acumulador - uma função que aceita dois parâmetros: um resultado parcial da operação de redução e o próximo elemento do fluxo;
+
+Combinador - uma função usada para combinar o resultado parcial da operação de redução, quando a redução é paralelizada ou quando há uma incompatibilidade entre os tipos de argumentos do acumulador e os tipos de implementação do acumulador;
+
+Link: https://receitasdecodigo.com.br/java/introducao-para-uso-do-stream-reduce
