@@ -30,7 +30,6 @@ public class Programa {
 				func.add(new Funcionarios(campos[0], campos[1], Double.parseDouble(campos[2])));
 				linha = buffer.readLine();
 			}
-			
 					
 			List<String> ef = func.stream().filter(s -> s.getSalario() > sal)
 			.map(s -> s.getEmail()).sorted().collect(Collectors.toList());
@@ -41,15 +40,15 @@ public class Programa {
 			
 			System.out.print("Digite a letra inicial dos funcionários que deseja somar os salarios: ");
 			char letra = ler.next().toUpperCase().charAt(0);
+			
 			double soma = func.stream()
 					.filter(f -> f.getNome().charAt(0) == letra)
 					.map(x -> x.getSalario())
-					.reduce(0.0, (x,y)-> x+y);
+					.reduce(0.0, (x,y)-> x + y);
 			
 			
 			System.out.print("Soma dos salários dos nomes iniciados com a letra digitada: "+soma);
 		}
-		
 		
 		catch(IOException e) {
 			System.out.println("Erro: "+ e.getMessage());
