@@ -1,11 +1,5 @@
-#APIs utilizadas na inserção de dados: 
+#Classe de tratamento de exceção 
 
-###PreparedStatement
-obj que permite a montagem de uma consulta sql deixando os parâmetros para depois.
+O primeiro número se refere a posição da (?) e o número seguinte é referente ao valor que será passado no comando SQL de consulta/exclusão /inserção passando esse valor para a (?) referente no comando SQL.
 
-###executeUpdate
-
-###Statement.RETURN_GENERATED_KEYS
-Permite a recuperação do novo id do novo obj inserido. Sobrecarga do método prepareStatement para retornar o novo Id criado com a inseção dos novos dados.
-
-###getGeneratedKeys
+ps.setInt(1, 5);

@@ -22,7 +22,7 @@ public class Programa {
 					+ "WHERE "
 					+ "Id = ? ");
 			
-			ps.setInt(1, 2);
+			ps.setInt(1, 5);
 			
 			int linhasAfetadas = ps.executeUpdate();
 			
