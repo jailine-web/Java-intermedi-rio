@@ -12,6 +12,7 @@ public class Programa {
 	public static void main(String[] args) {
 
 		Connection con = null;
+		Connection conn = null;
 		PreparedStatement ps = null;
 
 		try {

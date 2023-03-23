@@ -1,3 +1,11 @@
+#Caminho para inserir a biblioteca JDBC
+
+window -> preferences -> java -> build path -> User Libraries -> Nome da biblioteca -> Add external JARs -> localize o arquivo jar
+
+Adicionar a biblioteca criada ao projeto java:
+
+New projeto java -> nome do projeto -> next -> na aba libraries -> modulepath -> add Library -> User library (biblioteca de usuário, ou seja, uma biblioteca que eu criei) -> next -> marca a biblioteca desejada -> finish.
+
 #Links:
 Link do banco de dados: https://dev.mysql.com/downloads/workbench/
 Link do conector jdbc: https://dev.mysql.com/downloads/connector/j/?os=26 
