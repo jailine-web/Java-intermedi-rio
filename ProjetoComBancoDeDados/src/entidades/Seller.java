@@ -41,8 +41,13 @@ public class Seller implements Serializable{
 		return name;
 	}
 
+<<<<<<< HEAD:ProjetoComBancoDeDados/src/entidades/Seller.java
 	public void setName(String name) {
 		this.name = name;
+=======
+	public void setName(String nome) {
+		this.name = nome;
+>>>>>>> 4adbf9cbc04fdae7bc082c903ae932048fb204be:ProjetoComBancoDeDados/src/entities/Seller.java
 	}
 
 	public String getEmail() {

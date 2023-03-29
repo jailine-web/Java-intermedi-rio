@@ -8,6 +8,7 @@ import java.util.List;
 
 import db.DB;
 import db.DbException;
+<<<<<<< HEAD
 import entidades.Department;
 import entidades.Seller;
 import entidades.SellerDao;
@@ -15,6 +16,15 @@ import entidades.SellerDao;
 public class SellerDaoJDBC implements SellerDao {
 
 	// Dependï¿½ncia
+=======
+import entities.Department;
+import entities.Seller;
+import entities.SellerDao;
+
+public class SellerDaoJDBC implements SellerDao {
+
+	// Dependência
+>>>>>>> 4adbf9cbc04fdae7bc082c903ae932048fb204be
 	private Connection conn;
 
 	public SellerDaoJDBC(Connection conn) {
