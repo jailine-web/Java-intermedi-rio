@@ -41,13 +41,8 @@ public class Seller implements Serializable{
 		return name;
 	}
 
-<<<<<<< HEAD:ProjetoComBancoDeDados/src/entidades/Seller.java
 	public void setName(String name) {
 		this.name = name;
-=======
-	public void setName(String nome) {
-		this.name = nome;
->>>>>>> 4adbf9cbc04fdae7bc082c903ae932048fb204be:ProjetoComBancoDeDados/src/entities/Seller.java
 	}
 
 	public String getEmail() {
@@ -101,7 +96,7 @@ public class Seller implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Seller [id: " + id + ", nome: " + name + ", email=" 
+		return "Seller id: " + id + ", nome: " + name + ", email: " 
 				+ email + ", birthdate: " + birthDate + ", baseSalary: "
 				+ baseSalary + " Department: "+ department;
 	}
