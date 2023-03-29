@@ -1,9 +1,11 @@
-package aplicacao;
+package aplication;
 
 import java.util.Date;
 
-import entidades.Department;
-import entidades.Seller;
+import entities.DaoFactory;
+import entities.Department;
+import entities.Seller;
+import entities.SellerDao;
 
 public class Program {
 
@@ -15,6 +17,9 @@ public class Program {
 		Seller s = new Seller(21, "Bob", "bob@gmail.com", new Date(), 3000.0, objD);
 		System.out.println(s);
 		
+		SellerDao seller = DaoFactory.createSellerDao();	
+		
+		System.out.println(seller);
 	}
 
 }
