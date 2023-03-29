@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
@@ -14,11 +15,11 @@ public class DB {
 	private static Connection con = null;
 	
 	//Realiza a conexão com o banco de dados
-	public static Connection getConexao() {
+	public static Connection getConnection() {
 		
 		if(con == null) {
 			try {
-				Properties props = carregarPropriedades();
+				Properties props = loadProperties();
 				String url = props.getProperty("dburl");
 				con = DriverManager.getConnection(url, props);
 			}
@@ -30,7 +31,7 @@ public class DB {
 	}
 	//Método que fecha a conexão
 	
-	public static void fecharConexao() {
+	public static void closeConnection() {
 		if(con != null) {
 			try {
 				con.close();
@@ -42,7 +43,7 @@ public class DB {
 	}
 	
 	//Método que carrega os dados do arquivo properties
-	private static Properties carregarPropriedades() {
+	private static Properties loadProperties() {
 		
 		try(FileInputStream fs = new FileInputStream("db.properties")){
 			Properties prop = new Properties();
@@ -54,10 +55,21 @@ public class DB {
 		}
 	}
 	
-	public static void fecharConsulta(Statement st) {
+	public static void closeStatement(Statement st) {
 		if(st != null) {
 			try {
 				st.close();
+			}
+			catch(SQLException e) {
+				throw new DbException(e.getMessage());
+			}
+		}
+	}
+	
+	public static void closeResultSet(ResultSet rs) {
+		if(rs != null) {
+			try {
+				rs.close();
 			}
 			catch(SQLException e) {
 				throw new DbException(e.getMessage());

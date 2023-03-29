@@ -1,4 +1,5 @@
-package entities;
+
+package entidades;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -8,11 +9,11 @@ public class Department implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
 	private String nome;
-	
+
 	public Department() {
 
 	}
-	
+
 	public Department(int id, String nome) {
 		super();
 		this.id = id;
@@ -56,5 +57,5 @@ public class Department implements Serializable {
 	public String toString() {
 		return "Id: " + id + ", nome: " + nome;
 	}
-	
+
 }

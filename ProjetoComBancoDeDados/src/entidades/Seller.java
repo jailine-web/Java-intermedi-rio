@@ -1,4 +1,4 @@
-package entities;
+package entidades;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -8,9 +8,9 @@ public class Seller implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private int id;
-	private String nome;
+	private String name;
 	private String email;
-	private Date birthdate;
+	private Date birthDate;
 	private Double baseSalary;
 	
 	private Department department;
@@ -19,12 +19,12 @@ public class Seller implements Serializable{
 		
 	}
 	
-	public Seller(int id, String nome, String email, Date birthdate, 
+	public Seller(int id, String name, String email, Date birthDate, 
 			Double baseSalary, Department department) {
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 		this.email = email;
-		this.birthdate = birthdate;
+		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
@@ -37,12 +37,12 @@ public class Seller implements Serializable{
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {
@@ -53,12 +53,12 @@ public class Seller implements Serializable{
 		this.email = email;
 	}
 
-	public Date getBirthdate() {
-		return birthdate;
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
-	public void setBirthdate(Date birthdate) {
-		this.birthdate = birthdate;
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
 	}
 
 	public Double getBaseSalary() {
@@ -96,8 +96,8 @@ public class Seller implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Seller [id: " + id + ", nome: " + nome + ", email=" 
-				+ email + ", birthdate: " + birthdate + ", baseSalary: "
+		return "Seller [id: " + id + ", nome: " + name + ", email=" 
+				+ email + ", birthdate: " + birthDate + ", baseSalary: "
 				+ baseSalary + " Department: "+ department;
 	}
 	
