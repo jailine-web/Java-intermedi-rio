@@ -1,8 +1,8 @@
 package aplication;
 
-import entities.DaoFactory;
-import entities.Seller;
-import entities.SellerDao;
+import entidades.DaoFactory;
+import entidades.Seller;
+import entidades.SellerDao;
 
 public class Program {
 
