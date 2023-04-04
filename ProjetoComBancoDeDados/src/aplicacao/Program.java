@@ -2,6 +2,7 @@ package aplicacao;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import entidades.DaoFactory;
 import entidades.Department;
@@ -12,6 +13,7 @@ public class Program {
 
 	public static void main(String[] args) {
 
+		Scanner ler = new Scanner(System.in);
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 
 		System.out.println("#### TESTE 01: encontrar vendedor por meio do método findById #### ");
@@ -33,17 +35,26 @@ public class Program {
 			System.out.println(sel);
 		}
 		
-		System.out.println("\n##TESTE 04: inserindo dados a tabela vendedores ###");
+		/*System.out.println("\n##TESTE 04: inserindo dados a tabela vendedores ###");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, dep);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserido! novo id: " + newSeller.getId());
-		
+		*/
 		System.out.println("\n##TESTE 05: atualizando dados da tabela vendedor update seller ###");
 		seller = sellerDao.findById(1);
 		seller.setName("Martha Waine");
 		//seller.setEmail("martha@gmail.com");
 		sellerDao.update(seller);
 		System.out.println("Atualização completa!");
+		
+		System.out.println("\n##TESTE 05: deletando dados da tabela vendedor: delete() ###");
+		System.out.print("Digite o número do id que deseja excluir:");
+		int id = ler.nextInt();
+		sellerDao.delete(id);
+		System.out.println("Exclusão completa!");
+		
+		ler.close();
+		
 	}
 
 }
