@@ -6,5 +6,6 @@
 
 ### Statement.RETURN_GENERATED_KEYS: Retorna o novo id do novo obj inserido. É a sobrecarga do método prepareStatement para retornar o novo Id criado com a inseção dos novos dados.
 
-### getGeneratedKeys pega o(s) código(s) do(s) novo(s) objeto(s) e retorna um resultSet
+### getGeneratedKeys Guarda/contém todas as chaves geradas por inserção no banco de dados. 
+### Ele retorna um resultSet com todos os códigos dos objeto(s) inseridos, via insert.
 
