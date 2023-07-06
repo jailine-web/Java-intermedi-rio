@@ -1,11 +1,9 @@
-#APIs utilizadas na inserção de dados: 
+## APIs utilizadas na inserÃ§Ã£o de dados: 
 
-###PreparedStatement
-obj que permite a montagem de uma consulta sql deixando os parâmetros para depois.
+### PreparedStatement Ã© o objeto que permite a montagem de uma consulta sql deixando os parÃ¢metros para depois.
 
-###executeUpdate
+### executeUpdate executa o comando com a consulta SQL.
 
-###Statement.RETURN_GENERATED_KEYS
-Permite a recuperação do novo id do novo obj inserido. Sobrecarga do método prepareStatement para retornar o novo Id criado com a inseção dos novos dados.
+### Statement.RETURN_GENERATED_KEYS: Retorna o novo id do novo obj inserido. Sobrecarga do mÃ©todo prepareStatement para retornar o novo Id criado com a inseÃ§Ã£o dos novos dados.
 
-###getGeneratedKeys
+### getGeneratedKeys
