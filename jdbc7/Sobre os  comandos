@@ -1,0 +1,3 @@
+O comando con.setAutoCommit(false); faz com as operações não sejam confirmadas automaticamente, 
+ficando a cargo do programador confirmar a execução/confirmação do commit isso faz com que o código 
+torne-se atômico (ou executa tudo ou não executa nada).
